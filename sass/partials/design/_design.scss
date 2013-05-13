@@ -6,3 +6,34 @@
 //
 // All styling, non box model properties go here
 ////////////////////////
+
+[role="menu"] {
+  font-size: 2em;
+
+  @include clearfix;
+
+  select {
+    font-size: 1em;
+    height: 1em;
+    margin-left: .375em;
+
+    min-width: 3.5em;
+    max-width: 5em;
+
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+    border-bottom: 1px solid grey;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+
+    float: left;
+  }
+
+  label {
+    clear: both;
+    float: left;
+  }
+}
