@@ -191,12 +191,18 @@ module.exports = function (grunt) {
             cwd: 'images',
             src: ['**'],
             dest: '.www/images'
-	  },
-	  {
-	    expand: true,
-	    cwd: 'components',
-	    src: ['**'],
-	    dest: '.www/components'
+          },
+          {
+            expand: true,
+            cwd: 'components',
+            src: ['**'],
+            dest: '.www/components'
+          },
+          {
+            expand: true,
+            cwd: 'partials',
+            src: ['**'],
+            dest: '.www/partials'
           }
         ]
       },
