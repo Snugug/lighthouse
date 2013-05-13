@@ -43,3 +43,10 @@ function WorkOrderCtrl ($scope, $routeParams) {
 function WorkOrderDetailCtrl($scope, $routeParams) {
 
 }
+
+$(document).ready(function() {
+  Modernizr.load({
+    test: Modernizr.inputtypes.datetime,
+    nope: ['/components/datetime-polyfill/datetime-polyfill.min.js', '/components/datetime-polyfill/datetime-polyfill.css']
+  });
+});
