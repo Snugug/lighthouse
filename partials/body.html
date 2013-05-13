@@ -1,18 +1,18 @@
 <div class="left">
   <div class="item-wapper">
     <label for="subject">Subject</label>
-    <input type="text" id="subject" />
+    <input type="text" id="subject" ng-model="data.subject" />
   </div>
 
   <div class="item-wrapper">
     <label for="description">Description</label>
-    <textarea id="description"></textarea>
+    <textarea id="description" ng-model="data.desc" ></textarea>
   </div>
 </div>
 <div class="right last">
   <div class="item-wrapper">
     <label for="url">URL</label>
-    <input type="url" id="url" />
+    <input type="url" id="url" ng-model="data.url" />
   </div>
   <div class="item-wrapper">
     <label for="uploads">Files</label>
@@ -24,5 +24,5 @@
 <div class="submit-wrapper">
   <input type="hidden" value="206402589" name="SSO" />
   <input type="button" value="Reset" />
-  <input type="button" value="Save" />
+  <input type="button" value="Save" ng-click="saveData()" />
 </div>
