@@ -25,8 +25,18 @@ app.config(['$routeProvider', function($routeProvider) {
     otherwise({redirectTo: '/work'});
 }]);
 
+
 function WorkOrderCtrl ($scope, $routeParams) {
-  console.log($scope);
+  $scope.selectTemp = '';
+
+  $scope.templates =
+    [
+    { name: 'Problem', url: 'partials/problem.html'},
+    { name: 'Outage', url: 'partials/outage.html'},
+    { name: 'Request', url: 'partials/request.html'}
+  ];
+
+  $scope.template = $scope.templates[0];
 };
 
 function WorkOrderDetailCtrl($scope, $routeParams) {
