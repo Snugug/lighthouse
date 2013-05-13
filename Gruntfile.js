@@ -24,7 +24,7 @@ module.exports = function (grunt) {
         files: [
           'pages/{,**/}*.html',
           'pages/{,**/}*.md',
-          'templates/{,**/}*.html'
+          'templates/{,**/}*.html',
         ],
         tasks: ['generator:dev']
       },
@@ -46,6 +46,10 @@ module.exports = function (grunt) {
       css: {
         files: ['sass/{,**/}*.scss'],
         tasks: ['compass:dev']
+      },
+      partials: {
+        files: ['partials/**'],
+        tasks: ['copy:dev']
       }
     },
 
