@@ -1,6 +1,6 @@
 
 // Our LH app.
 var app = angular.module('lighthouse', []);
-app.controller('WorkOrderCtls', function ($scope) {
+app.controller('WorkOrderCtrl', function ($scope) {
   console.log($scope);
 });
