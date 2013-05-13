@@ -8,6 +8,7 @@ app.factory('orders', function() {
 
   return {
     add: function(val) {
+      val.id = list.length + 1;
       list.push(val);
     },
     get: function() {
@@ -48,7 +49,13 @@ app.config(function($routeProvider, $locationProvider) {
 
 function WorkOrderListCtrl($scope, orders, $rootScope) {
   $scope.myData = orders.get();
-  $scope.myOptions = { data: 'myData' };
+  $scope.myOptions = {
+    data: 'myData'
+  };
+
+  $scope.$on('ngGridEventData', function(){
+    console.log(this);
+  });
 }
 
 
@@ -65,7 +72,7 @@ function WorkOrderCtrl ($scope, $routeParams, $location, orders, $rootScope) {
   $scope.saveData = function() {
     $location.path('/work-list');
     $scope.data.date = new Date();
-    $scope.status = 'New';
+    $scope.data.status = 'New';
     orders.add($scope.data);
   }
 
