@@ -1,23 +1,22 @@
 <!doctype html>
-<html ng-app="lh">
-  <head>
-    <title>{{#if page.title}}{{page.title}}{{else}}Hello World{{/if}}</title>
-    <link rel="stylesheet" type="text/css" href="{{options.assets}}/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-
-  <body>
-    {{{body}}}
-
+<html ng-app="lighthouse">
+<head>
+  <title>{{#if page.title}}{{page.title}}{{else}}Hello World{{/if}}</title>
+  <link rel="stylesheet" type="text/css" href="{{options.assets}}/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body ng-controller="WorkOrderCtls">
+  {{{body}}}
 
 
-    <script src="{{options.assets}}/components/jquery/jquery.min.js"></script>
-    <script src="{{options.assets}}/components/angular/angular.min.js"></script>
-    <script src="{{options.assets}}/js/app.min.js"></script>
 
-  {{#if options.development}}
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':{{options.lrport}}/livereload.js?snipver=1"></' + 'script>')
-    </script>
-  {{/if}}
-  </body>
+  <script src="{{options.assets}}/components/jquery/jquery.min.js"></script>
+  <script src="{{options.assets}}/components/angular/angular.min.js"></script>
+  <script src="{{options.assets}}/js/app.min.js"></script>
+
+{{#if options.development}}
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':{{options.lrport}}/livereload.js?snipver=1"></' + 'script>')
+  </script>
+{{/if}}
+</body>
 </html>
