@@ -50,3 +50,20 @@
   font-size: .75em;
   color: #888;
 }
+
+.warning {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: shade(red, 75%);
+  text-align: center;
+
+  background: tint(red, 50%);
+  border: 2px solid shade(red, 25%);
+  border-radius: .25em;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: .25em;
+  }
+}
