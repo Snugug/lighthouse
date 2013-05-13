@@ -27,6 +27,7 @@ app.config(['$routeProvider', function($routeProvider) {
 
 
 function WorkOrderCtrl ($scope, $routeParams) {
+  $scope.topForm = 'partials/body.html'
   $scope.selectTemp = '';
 
   $scope.templates =
