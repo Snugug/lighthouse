@@ -9,7 +9,8 @@
     "select2": "~3.3.2",
     "angular-ui-select2": "~0.0.1",
     "jquery": "~2.0.0",
-    "datetime-polyfill": "git://github.com/jonstipe/datetime-polyfill.git"
+    "datetime-polyfill": "git://github.com/jonstipe/datetime-polyfill.git",
+    "ng-grid": "git@github.com:angular-ui/ng-grid.git#~2.0.5"
   },
   "devDependencies": {}
 }

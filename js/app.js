@@ -22,7 +22,9 @@ app.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'partials/problem.html',
       controller: WorkOrderCtrl
     }).
-    otherwise({redirectTo: '/work'});
+    otherwise({
+      redirectTo: '/work'
+    });
 }]);
 
 
@@ -30,8 +32,7 @@ function WorkOrderCtrl ($scope, $routeParams) {
   $scope.topForm = 'partials/body.html'
   $scope.selectTemp = '';
 
-  $scope.templates =
-    [
+  $scope.templates = [
     { name: 'Problem', url: 'partials/problem.html'},
     { name: 'Outage', url: 'partials/outage.html'},
     { name: 'Request', url: 'partials/request.html'}
