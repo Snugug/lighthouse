@@ -328,7 +328,6 @@ module.exports = function (grunt) {
     'compass:dev',
     'uglify:dev',
     'generator:dev',
-    'jshint'
   ]);
 
   grunt.registerTask('server', 'Starts a development server', function() {
