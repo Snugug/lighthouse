@@ -83,3 +83,15 @@ form {
 [value="Save"] {
   @include sassy-button('shiny', 1em, .75em, #008fcc);
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: .75em;
+}

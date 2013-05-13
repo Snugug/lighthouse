@@ -14,7 +14,7 @@
 
   select {
     font-size: 1em;
-    height: 1em;
+    height: 1.15em;
     margin-left: .375em;
 
     min-width: 3.5em;
@@ -25,6 +25,7 @@
     border: none;
     background-color: transparent;
     border-radius: 0;
+    padding-bottom: .15em;
     border-bottom: 1px solid grey;
 
     -webkit-appearance: none;
@@ -32,6 +33,13 @@
     -ms-appearance: none;
 
     float: left;
+
+    &:after {
+      display: inline-block;
+      content: '.';
+      height: 1em;
+      width: 1em;
+    }
   }
 
   label {
@@ -69,4 +77,8 @@
     margin-bottom: 0;
     padding: .25em;
   }
+}
+
+body {
+  font-family: sans-serif;
 }
