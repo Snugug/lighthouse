@@ -33,7 +33,7 @@ module.exports = function (grunt) {
           'js/{,**/}*.js',
           '!js/{,**/}*.min.js'
         ],
-        tasks: ['jshint', 'uglify:dev']
+        tasks: ['uglify:dev']
       },
       images: {
         files: ['images/**'],
