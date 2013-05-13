@@ -1,6 +1,6 @@
 
 // Our LH app.
-var app = angular.module('lighthouse', ['ui.select2']);
+var app = angular.module('lighthouse', ['ui.select2', 'ngGrid']);
 
 app.factory('orders', function() {
 
@@ -47,7 +47,8 @@ app.config(function($routeProvider, $locationProvider) {
 });
 
 function WorkOrderListCtrl($scope, orders, $rootScope) {
-  $scope.list = orders.get();
+  $scope.myData = orders.get();
+  $scope.myOptions = { data: 'myData' };
 }
 
 
@@ -59,13 +60,12 @@ function WorkOrderCtrl ($scope, $routeParams, $location, orders, $rootScope) {
   $scope.list = [];
 
   $scope.data = {
-    title: '',
-    url: '',
-    desc: ''
   };
 
   $scope.saveData = function() {
     $location.path('/work-list');
+    $scope.data.date = new Date();
+    $scope.status = 'New';
     orders.add($scope.data);
   }
 
