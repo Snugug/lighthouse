@@ -43,9 +43,15 @@ module.exports = function (grunt) {
         files: ['fonts/**'],
         tasks: ['copy:dev']
       },
-      css: {
+      sass: {
         files: ['sass/{,**/}*.scss'],
-        tasks: ['compass:dev']
+	tasks: ['compass:dev'],
+	options: {
+	  livereload: false
+	}
+      },
+      css: {
+	files: ['.www/css/{,**/}*.css']
       },
       partials: {
         files: ['partials/**'],
