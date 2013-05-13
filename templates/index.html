@@ -2,6 +2,9 @@
 <html ng-app="lighthouse">
 <head>
   <title>{{#if page.title}}{{page.title}}{{else}}Hello World{{/if}}</title>
+
+  <link rel="stylesheet" type="text/css" href="{{options.assets}}/components/select2/select2.css">
+
   <link rel="stylesheet" type="text/css" href="{{options.assets}}/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -10,7 +13,9 @@
 
 
   <script src="{{options.assets}}/components/jquery/jquery.min.js"></script>
+  <script src="{{options.assets}}/components/select2/select2.min.js"></script>
   <script src="{{options.assets}}/components/angular/angular.min.js"></script>
+  <script src="{{options.assets}}/components/angular-ui-select2/src/select2.js"></script>
   <script src="{{options.assets}}/js/comp.min.js"></script>
   <script src="{{options.assets}}/js/app.min.js"></script>
 {{#if options.development}}

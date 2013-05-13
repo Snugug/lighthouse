@@ -1,6 +1,6 @@
 
 // Our LH app.
-var app = angular.module('lighthouse', []);
+var app = angular.module('lighthouse', ['ui.select2']);
 
 
 // Our hack up paths because of the generator issue to work around.
