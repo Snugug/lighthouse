@@ -1,14 +1,22 @@
-<form>
-  <div class="item-wapper">
-    <label for="title">Title</label>
-    <input type="text" id="title" />
-  </div>
-  <div class="item-wrapper">
-    <label for="url">Example URL</label>
-    <input type="text" id="url" />
-  </div>
-  <div class="item"
-    <label for="description">Description</label>
-    <textarea id="description"></textarea>
-  </div>
-</form>
+<div class="item-wapper">
+  <label for="title">Title</label>
+  <input type="text" id="title" />
+</div>
+<div class="item-wrapper">
+  <label for="url">Example URL</label>
+  <input type="text" id="url" />
+</div>
+<div class="item-wrapper">
+  <label for="description">Description</label>
+  <textarea id="description"></textarea>
+</div>
+<div class="item-wrapper">
+  <label for="uploads">Files</label>
+  <input type="file" id="uploads" />
+  <p class="description">Upload files related to this issue, including screenshots. Allowed file extensions are <em>.png, .jpg, .jpeg, .csv</em>. Each file should be under 10MB in size.</p>
+</div>
+
+<div class="submit-wrapper">
+  <input type="button" value="Reset" />
+  <input type="button" value="Submit" />
+</div>
