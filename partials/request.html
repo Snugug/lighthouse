@@ -1,7 +1,13 @@
 <form>
-  <label for="critical">Critical</label>
-  <input type="checkbox" id="critical" />
-  <label for="date">Required By</label>
-  <input type="datetime" id="date" />
-  <div ng-include="topForm"></div>
+  <div class="right">
+    <div class="item-wrapper">
+      <label for="critical">Critical</label>
+      <input type="checkbox" id="critical" />
+    </div>
+    <div class="item-wrapper">
+      <label for="date">Required By</label>
+      <input type="datetime" id="date" />
+    </div>
+  </div>
+  <ng-include src="topForm"></ng-include>
 </form>

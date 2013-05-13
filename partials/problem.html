@@ -1,10 +1,12 @@
 <form>
-  <label for="severity">Severity:</label>
-  <select id="severity">
-    <option value="4">Low</option>
-    <option value="3">Medium</option>
-    <option value="2">High</option>
-    <option value="1">Urgent</option>
-  </select>
-  <div ng-include="topForm"></div>
+  <div class="item-wrapper right"
+    <label for="severity">Severity:</label>
+    <select id="severity">
+      <option value="4">Low</option>
+      <option value="3">Medium</option>
+      <option value="2">High</option>
+      <option value="1">Urgent</option>
+    </select>
+  </div>
+  <ng-include src="topForm"></ng-include>
 </form>
