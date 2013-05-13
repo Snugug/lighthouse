@@ -8,7 +8,8 @@
     "angular-hammerjs": "latest",
     "select2": "~3.3.2",
     "angular-ui-select2": "~0.0.1",
-    "jquery": "~2.0.0"
+    "jquery": "~2.0.0",
+    "datetime-polyfill": "git://github.com/jonstipe/datetime-polyfill.git"
   },
   "devDependencies": {}
 }
