@@ -4,7 +4,9 @@ var app = angular.module('lighthouse', ['ui.select2']);
 
 
 // Our hack up paths because of the generator issue to work around.
-app.config(['$routeProvider', function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
+  $locationProvider.html5Mode(true);
+
   $routeProvider.
     when('/work', {
       templateUrl: 'partials/workorder.html',
@@ -22,15 +24,33 @@ app.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'partials/problem.html',
       controller: WorkOrderCtrl
     }).
+    when('/work-list', {
+      templateUrl: 'partials/worklist.html',
+      controller: WorkOrderCtrl
+    }).
     otherwise({
       redirectTo: '/work'
     });
-}]);
+});
 
 
-function WorkOrderCtrl ($scope, $routeParams) {
+function WorkOrderCtrl ($scope, $routeParams, $location) {
   $scope.topForm = 'partials/body.html'
   $scope.selectTemp = '';
+
+  $scope.list = [];
+
+  $scope.data = {
+    title: '',
+    url: '',
+    desc: ''
+  };
+
+  $scope.saveData = function() {
+    $scope.list.push($scope.data);
+    $location.path('/work-list');
+    console.log($scope.data);
+  }
 
   $scope.templates = [
     { name: 'Problem', url: 'partials/problem.html'},
