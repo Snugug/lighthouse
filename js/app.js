@@ -2,6 +2,19 @@
 // Our LH app.
 var app = angular.module('lighthouse', ['ui.select2']);
 
+app.factory('orders', function() {
+
+  var list = [];
+
+  return {
+    add: function(val) {
+      list.push(val);
+    },
+    get: function() {
+      return list;
+    },
+  }
+});
 
 // Our hack up paths because of the generator issue to work around.
 app.config(function($routeProvider, $locationProvider) {
@@ -26,15 +39,20 @@ app.config(function($routeProvider, $locationProvider) {
     }).
     when('/work-list', {
       templateUrl: 'partials/worklist.html',
-      controller: WorkOrderCtrl
+      controller: WorkOrderListCtrl
     }).
     otherwise({
       redirectTo: '/work'
     });
 });
 
+function WorkOrderListCtrl($scope, orders, $rootScope) {
+  $scope.list = orders.get();
+}
 
-function WorkOrderCtrl ($scope, $routeParams, $location) {
+
+function WorkOrderCtrl ($scope, $routeParams, $location, orders, $rootScope) {
+  $rootScope.list = [];
   $scope.topForm = 'partials/body.html'
   $scope.selectTemp = '';
 
@@ -47,9 +65,8 @@ function WorkOrderCtrl ($scope, $routeParams, $location) {
   };
 
   $scope.saveData = function() {
-    $scope.list.push($scope.data);
     $location.path('/work-list');
-    console.log($scope.data);
+    orders.add($scope.data);
   }
 
   $scope.templates = [
@@ -62,6 +79,10 @@ function WorkOrderCtrl ($scope, $routeParams, $location) {
 };
 
 function WorkOrderDetailCtrl($scope, $routeParams) {
+
+}
+
+function TopLevelCtrl($scope) {
 
 }
 
