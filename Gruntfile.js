@@ -320,6 +320,7 @@ module.exports = function (grunt) {
   grunt.registerTask('server-init', [
     'copy:dev',
     'compass:dev',
+    'uglify:dev',
     'generator:dev',
     'jshint'
   ]);
