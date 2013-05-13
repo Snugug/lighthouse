@@ -1,4 +1,5 @@
-<html>
+<!doctype html>
+<html ng-app="lh">
   <head>
     <title>{{#if page.title}}{{page.title}}{{else}}Hello World{{/if}}</title>
     <link rel="stylesheet" type="text/css" href="{{options.assets}}/css/style.css">
@@ -9,8 +10,10 @@
     {{{body}}}
 
 
+
     <script src="{{options.assets}}/components/jquery/jquery.min.js"></script>
     <script src="{{options.assets}}/components/angular/angular.min.js"></script>
+    <script src="{{options.assets}}/js/app.min.js"></script>
 
   {{#if options.development}}
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':{{options.lrport}}/livereload.js?snipver=1"></' + 'script>')
