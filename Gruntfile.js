@@ -2,7 +2,7 @@
 
 var port = 8000;
 var lrport = port + 1;
-var gh_repo = 'static';
+var gh_repo = 'lighthouse';
 
 module.exports = function (grunt) {
 
